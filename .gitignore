@@ -1,0 +1,4 @@
+graph_env
+.vscode
+__pycache__
+*.zip
