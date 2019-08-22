@@ -1,0 +1,27 @@
+QRadioButton#exp_radio{
+    image: url("images/exp-50.png");
+}
+
+QRadioButton#sqr_radio{
+    image: url("images/sqr-50.png");
+}
+
+QRadioButton#cube_radio{
+    image: url("images/cube-50.png");
+}
+
+QRadioButton#linear_radio{
+    image: url("images/linear-50.png");
+}
+
+QRadioButton#quadratic_radio{
+    image: url("images/quadratic-50.png");
+}
+
+QRadioButton{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding: 5px;
+    background: #ffffff;
+}

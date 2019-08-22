@@ -1,5 +1,6 @@
 import sys
 from PyQt5 import QtWidgets as widgets
+from PyQt5.QtGui import *
 from string import ascii_lowercase
 import math
 import re
@@ -164,6 +165,7 @@ class Window():
     def init_ui(self):
         self.app = widgets.QApplication(sys.argv)
         self.w = widgets.QWidget()
+        self.app.setStyleSheet(open("misc/styles.qss").read())
         self.w.setGeometry(100, 100, 600, 200)
 
         self.btn = widgets.QPushButton("Graph Selected Function")
@@ -180,6 +182,7 @@ class Window():
         self.out_layout_vbox.addStretch()
 
         self.var_row1_hbox = widgets.QHBoxLayout()
+        self.var_row1_hbox.setObjectName('row1')
         self.var_row2_hbox = widgets.QHBoxLayout()
         self.row1_hbox = widgets.QHBoxLayout()
         self.row2_hbox = widgets.QHBoxLayout()
@@ -208,11 +211,16 @@ class Window():
         self.var_edits['x'].setEnabled(False)
 
         #radio buttons for graphing functions
-        self.exp_func_radio = widgets.QRadioButton('ax^z')
-        self.sqr_func_radio = widgets.QRadioButton('ax^2')
-        self.cubic_func_radio = widgets.QRadioButton('ax^3')
-        self.linear_func_radio = widgets.QRadioButton('ax+b')
-        self.quadratic_func_radio = widgets.QRadioButton('ax^2+bx+c')
+        self.exp_func_radio = widgets.QRadioButton()
+        self.exp_func_radio.setObjectName('exp_radio')
+        self.sqr_func_radio = widgets.QRadioButton()
+        self.sqr_func_radio.setObjectName('sqr_radio')
+        self.cubic_func_radio = widgets.QRadioButton()
+        self.cubic_func_radio.setObjectName('cube_radio')
+        self.linear_func_radio = widgets.QRadioButton()
+        self.linear_func_radio.setObjectName('linear_radio')
+        self.quadratic_func_radio = widgets.QRadioButton()
+        self.quadratic_func_radio.setObjectName('quadratic_radio')
 
         #button group additons
         self.btn_group = widgets.QButtonGroup()
